@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "./header";
 import { Button } from "@/components/ui/button";
 import { crimson_regular_italic } from "./fonts";
+import BlurIn from "@/components/ui/blur-in";
 
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
         <div
           className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20"
         >
-          <main className="flex flex-col gap-8 row-start-2 justify-center items-center sm:items-start text-white">
+
+          <BlurIn className="flex flex-col gap-8 row-start-2 justify-center items-center sm:items-start text-white">
             <div className="flex gap-4 items-center flex-col text-center lg:text-start">
               <p className="text-4xl font-bold" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
                 ideas that <span className={` ${crimson_regular_italic.className} tracking-[-3px] text-5xl ml-1 mr-4`}>excite you</span>are <span className="border-b border-white pb-1">worth pursuing</span>.
@@ -30,7 +32,7 @@ export default function Home() {
                 attend upcoming sessions 
               </Button>
             </div>
-          </main>
+          </BlurIn>
           <footer className="row-start-3 flex gap-3 flex-wrap items-center justify-center text-white">
             <Link
               className="flex items-center gap-1 no-underline hover:no-underline hover:border-b hover:border-white transition-all duration-300"
