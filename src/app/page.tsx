@@ -6,7 +6,7 @@ import Header from "./header";
 import { Button } from "@/components/ui/button";
 import { crimson_regular_italic } from "./fonts";
 import BlurIn from "@/components/ui/blur-in";
-
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function Home() {
   return (
@@ -25,9 +25,9 @@ export default function Home() {
               <p className="text-xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>what will you build?</p>
             </div>
             <div className="flex flex-col lg:flex-row w-full space-y-4 lg:space-y-0 lg:space-x-4 items-center justify-center">
-              <Button href="https://airtable.com/appey9cwVC1uMIt24/pagHg0eBEB677V7vc/form" className="px-12 w-full lg:w-auto">
-                apply to our f24 cohort
-              </Button>
+              <Link href="https://airtable.com/appey9cwVC1uMIt24/pagHg0eBEB677V7vc/form">
+              <RainbowButton>apply to our f24 cohort</RainbowButton>
+              </Link>
               <Button href="https://lu.ma/stanfordhackspace" variant={"outline"} className="px-8 w-full lg:w-auto">
                 attend upcoming sessions 
               </Button>
