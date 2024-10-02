@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./header";
@@ -14,17 +16,17 @@ export default function Home() {
           className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20"
         >
           <main className="flex flex-col gap-8 row-start-2 justify-center items-center sm:items-start text-white">
-            <div className="flex gap-4 items-center flex-col">
+            <div className="flex gap-4 items-center flex-col text-center lg:text-start">
               <p className="text-4xl font-bold" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
                 ideas that <span className={` ${crimson_regular_italic.className} tracking-[-3px] text-5xl ml-1 mr-4`}>excite you</span>are <span className="border-b border-white pb-1">worth pursuing</span>.
               </p>
               <p className="text-xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>what will you build?</p>
             </div>
-            <div className="flex flex-row w-full space-x-4 items-center justify-center">
-              <Button href="https://airtable.com/appey9cwVC1uMIt24/pagHg0eBEB677V7vc/form">
+            <div className="flex flex-col lg:flex-row w-full space-y-4 lg:space-y-0 lg:space-x-4 items-center justify-center">
+              <Button href="https://airtable.com/appey9cwVC1uMIt24/pagHg0eBEB677V7vc/form" className="px-12 w-full lg:w-auto">
                 apply to our f24 cohort
               </Button>
-              <Button href="https://lu.ma/stanfordhackspace" variant={"outline"}>
+              <Button href="https://lu.ma/stanfordhackspace" variant={"outline"} className="px-8 w-full lg:w-auto">
                 attend upcoming sessions 
               </Button>
             </div>

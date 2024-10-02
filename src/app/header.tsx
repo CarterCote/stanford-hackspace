@@ -33,7 +33,7 @@ export default function Header() {
             .toString()
             .padStart(2, "0")} H ${minutes
             .toString()
-            .padStart(2, "0")} M ${seconds.toString().padStart(2, "0")} S until hackspace (aka more time to create)`
+            .padStart(2, "0")} M ${seconds.toString().padStart(2, "0")} S until hackspace (aka more time to build)`
         );
       }, 1000);
 
