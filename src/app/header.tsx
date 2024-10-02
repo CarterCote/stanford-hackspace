@@ -11,30 +11,32 @@ export default function Header() {
       const interval = setInterval(() => {
         const now = new Date();
         const currentDay = now.getDay();
-  
-        if (currentDay >= 5 && currentDay <= 0) {
-          setCountdown("Hackspace is currently live. Stop by and spend some time on ur project!");
-        } else {
-          const friday = new Date(now);
-          friday.setDate(now.getDate() + (5 - currentDay + 7) % 7);
-          friday.setHours(0, 0, 0, 0);
-  
-          const diff = friday.getTime() - now.getTime();
-          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-          const minutes = Math.floor((diff / (1000 * 60)) % 60);
-          const seconds = Math.floor((diff / 1000) % 60);
-  
-          setCountdown(
-            `${days.toString().padStart(2, "0")} D ${hours
-              .toString()
-              .padStart(2, "0")} H ${minutes
-              .toString()
-              .padStart(2, "0")} M ${seconds.toString().padStart(2, "0")} S until hackspace (aka more time to create)`
-          );
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
+
+        let friday = new Date(now);
+        friday.setDate(now.getDate() + ((5 - currentDay + 7) % 7));
+        friday.setHours(16, 30, 0, 0); // Set to 4:30 PM PST
+
+        if (now > friday) {
+          friday.setDate(friday.getDate() + 7); // Move to next Friday if past 4:30 PM
         }
+
+        const diff = friday.getTime() - now.getTime();
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        setCountdown(
+          `${days.toString().padStart(2, "0")} D ${hours
+            .toString()
+            .padStart(2, "0")} H ${minutes
+            .toString()
+            .padStart(2, "0")} M ${seconds.toString().padStart(2, "0")} S until hackspace (aka more time to create)`
+        );
       }, 1000);
-  
+
       return () => clearInterval(interval);
     }, []);
 
