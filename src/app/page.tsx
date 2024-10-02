@@ -21,10 +21,10 @@ export default function Home() {
               <p className="text-xl" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>what will you build?</p>
             </div>
             <div className="flex flex-row w-full space-x-4 items-center justify-center">
-              <Button>
+              <Button href="https://airtable.com/appey9cwVC1uMIt24/pagHg0eBEB677V7vc/form">
                 apply to our f24 cohort
               </Button>
-              <Button variant={"outline"}>
+              <Button href="https://lu.ma/stanfordhackspace" variant={"outline"}>
                 attend upcoming sessions 
               </Button>
             </div>
