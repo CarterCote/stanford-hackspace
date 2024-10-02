@@ -14,7 +14,7 @@ export default function Home() {
   const { width, height } = useWindowSize();
 
   return (
-    <div style={{ backgroundImage: 'url(/hackspaceBg.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+    <div style={{ backgroundImage: 'url(/hackspaceBg.png)', backgroundSize: 'cover', backgroundPosition: 'center', overflowX: 'hidden' }}>
       <FlickeringGrid
         className="z-0 absolute inset-0 size-full"
         squareSize={4}
