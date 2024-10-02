@@ -19,8 +19,8 @@ export default function Home() {
         className="z-0 absolute inset-0 size-full"
         squareSize={4}
         gridGap={6}
-        color="#6B7280"
-        maxOpacity={0.5}
+        color="#FF7F7F"
+        maxOpacity={0.3}
         flickerChance={0.1}
         height={height}  // Scale down height
         width={width -15}    // Scale down width
