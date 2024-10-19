@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakarta.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${plusJakarta.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
         {children}
       </body>
