@@ -49,7 +49,7 @@ export default function Header() {
               <div className="flex md:flex-row flex-col md:pt-6 pt-3 items-center md:px-8 px-2 w-full justify-between">
                 <Link href="/">
                   <div>
-                    <p className={`text-[18px] font-bold hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-[#FFCBA2] hover:to-[#D895B7] transition duration-500`}>bases hackspace at stanford🚢</p>
+                    <p className={`text-[18px] font-bold hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-[#FFCBA2] hover:to-[#D895B7] transition duration-500`}>bases hackspace @ stanford🚢</p>
                   </div>
                 </Link>
                 <p className={`text-[16px] tracking-tighter`}>{countdown}</p>

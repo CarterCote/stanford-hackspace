@@ -58,8 +58,8 @@ export default function Home() {
           color="#FF7F7F"
           maxOpacity={0.3}
           flickerChance={0.1}
-          height={height}  // Scale down height
-          width={width -15}    // Scale down width
+          height={height + 80}  // Scale down height
+          width={width}    // Scale down width
         />
         <div className="bg-black bg-opacity-40">
           <Header />
@@ -104,41 +104,107 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-8 my-12">
-        <WorkspaceCard
-          title="build at starb*cks"
-          image="/cardCoffee.png"
-          features={[
-            "loud, corny pop music",
-            "stiff, painful stools",
-            "closes at 3pm ~ 5pm (wtf)",
-            "overpriced food & drinks",
-          ]}
-          positive={false}
-        />
-        <WorkspaceCard
-          title="build at hackspace"
-          image="/cardHackspace.png"
-          features={[
-            "vibey, ambient & focus music",
-            "access to cool ppl + mentors",
-            "opens until 12am midnight daily",
-            "free food & drinks (sometimes boba)",
-          ]}
-          positive={true}
-          viewMore={true}
-        />
-        <WorkspaceCard
-          title="build at ur dorm/apt"
-          image="/hackspaceBg.png"
-          features={[
-            "too many distractions (ur bed or fridge)",
-            "super cramped work area",
-            "uncomfy seats",
-            "no free food",
-          ]}
-          positive={false}
-        />
+      <div className="flex flex-col text-center align-center justify-center gap-8 my-52">
+        <p className="text-4xl font-bold text-white">
+          what can I expect?
+        </p>
+        <div className="justify-center gap-8 max-w-2xl text-white text-lg text-start mx-auto">
+          <p>
+            a space for driven folks to hold each other accountable to make progress on an idea they're working on.
+            the project you work on can be anything! ex. coding an app, CADing, training models.
+            <br/>            <br/>
+          </p>
+          <p>
+          </p>
+          <p>
+            there's only one rule: no school work!
+            at the end, we'll have 2 minute demos for people to talk about what they worked on — completely optional, so no pressure!
+          </p>
+          <p>
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-wrap justify-center gap-8 my-24">
+        <p className="text-4xl font-bold text-white">
+          for the love of <span className={` ${crimson_regular_italic.className} tracking-[-3px] text-5xl ml-1 mr-4`}>making</span>and <span className={` ${crimson_regular_italic.className} tracking-[-3px] text-5xl`}>creating.</span>
+        </p>
+        <div className="flex flex-wrap justify-center gap-8">
+          <WorkspaceCard
+            title="build at starb*cks"
+            image="/cardCoffee.png"
+            features={[
+              "loud, corny pop music",
+              "stiff, painful stools",
+              "closes at 3pm ~ 5pm (wtf)",
+              "overpriced food & drinks",
+            ]}
+            positive={false}
+          />
+          <WorkspaceCard
+            title="build at hackspace"
+            image="/cardHackspace.png"
+            features={[
+              "vibey, ambient & focus music",
+              "access to cool ppl + mentors",
+              "opens until 12am midnight daily",
+              "free food & drinks (sometimes boba)",
+            ]}
+            positive={true}
+            viewMore={true}
+          />
+          <WorkspaceCard
+            title="build at ur dorm/apt"
+            image="/cardDorm.png"
+            features={[
+              "too many distractions (ur bed or fridge)",
+              "super cramped work area",
+              "uncomfy seats",
+              "no free food",
+            ]}
+            positive={false}
+          />
+        </div>
+      </div>
+      <div className="flex flex-col text-center align-center justify-center gap-8 my-52">
+        <p className="text-4xl font-bold text-white">
+          who runs this?
+        </p>
+        <div className="justify-center gap-8 max-w-2xl text-white text-lg text-start mx-auto">
+          <p>
+            we're a group of tinkerers and builders that enjoy bringing our ideas to life.
+            our hosts include: {' '}
+            <Link href="https://www.linkedin.com/in/anishch1/" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">anish</Link>, {' '}
+            <Link href="https://www.linkedin.com/in/prady-saligram/" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">prady</Link>, {' '}
+            <Link href="https://www.cartercote.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">carter</Link>, {' '}
+            <Link href="https://www.linkedin.com/in/adarshambati/" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">adarsh</Link>, {' '}
+            <Link href="https://www.linkedin.com/in/siyagoel" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">siya</Link>, {' '}
+            <Link href="https://www.linkedin.com/in/ramya-i/" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">ramya</Link>, {' '}
+            <Link href="https://www.linkedin.com/in/antonio-noyola-3a4797305/" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">antonio</Link>, and {' '}
+            <Link href="https://www.linkedin.com/in/nikashchhadia/" target="_blank" rel="noopener noreferrer" className="underline hover:text-red-500 transition-colors duration-300">nik</Link> :)
+            <br/>            <br/>
+          </p>
+          <p>
+          </p>
+          <p className="flex gap-2">
+            hackspace is also part of stanford               <Link
+                className="flex items-center gap-1 no-underline hover:no-underline hover:border-b hover:border-white transition-all duration-300"
+                href="https://bases.stanford.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  aria-hidden
+                  src="/basesLogo.png"
+                  className="mt-0.5"
+                  alt="bases"
+                  width={48}
+                  height={24}
+                />
+              </Link>
+          </p>
+          <p>
+          </p>
+        </div>
       </div>
     </>
   );
