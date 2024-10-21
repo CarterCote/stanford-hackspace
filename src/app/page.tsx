@@ -146,7 +146,7 @@ export default function Home() {
             features={[
               "vibey, ambient & focus music",
               "access to cool ppl + mentors",
-              "opens until 12am midnight daily",
+              "opens every friday from 4:30pm-7",
               "free food & drinks (sometimes boba)",
             ]}
             positive={true}
